@@ -13,7 +13,7 @@ export default function () {
 
 
     const setSelectedCategory = useCallback(
-        (payload: boolean) => dispatch({type: types.SET_SELECTED_CATEGORY, payload}),
+        (payload: string) => dispatch({type: types.SET_SELECTED_CATEGORY, payload}),
         [dispatch]);
 
     return {

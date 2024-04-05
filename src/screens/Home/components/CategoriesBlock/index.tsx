@@ -1,5 +1,6 @@
 import {useEffect, FC} from 'react';
 import {useNavigation} from "@react-navigation/native";
+import { StackNavigationProp } from '@react-navigation/stack';
 import {Text, TouchableOpacity, View, StyleSheet} from "react-native";
 import {useSelector} from "react-redux";
 import {ProductSelectors, useProductActions} from "../../../../redux";
@@ -8,7 +9,7 @@ import CategoryProductList from "./components/CategoryProductList";
 
 const CategoriesBlock: FC = () => {
     const navigation =
-        useNavigation<StackNavigationProp<RootStackNavigatorParamsList>>();
+        useNavigation<StackNavigationProp<any>>();
 
     const {setCategories, setSelectedCategory} = useProductActions();
     const categories = useSelector(ProductSelectors.categories);
